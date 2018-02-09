@@ -22,9 +22,9 @@ To create a new branch, simply type `git checkout -b <branch_name>` where `<bran
 
 #### 5.  Uploading changes to a repository
 In the Git Bash command prompt, type `git add <file_name>`, where `<file_name>` is the file you would like to update.  If you want to add every file you've changed, use `git add .` instead.  <br />
-Type `git commit -m <message>` where `<message>` is the detail of the change.  <br />
+Type `git commit -m <message>` where `<message>` is the detail of the change to schedule a change.  <br />
 If this is the first time pushing the change, type `git remote add origin https://github.com/auchiyam/flag_quest.git` to tell git that's where you want to upload the change to.  <br />
-Finally, type `git push -u origin <branch>` to upload the file.  <br />
+Finally, type `git push -u origin <branch>` to upload the change.  <br />
 
 #### 6.  Updating the project folder with newest version
 In order to update your local copy of the project with the newest one on the repository, type `git pull` in the branch you want to update.  <br />
