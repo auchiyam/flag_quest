@@ -12,17 +12,17 @@ You must then install git on your computer.  Go to https://git-scm.com/downloads
 #### 3.  Cloning a repository
 Cloning a repository allows you to download the source code on the repository to work with.  <br />
 Open git-bash.exe or Git Bash to open the command prompt designed for git.  <br />
-Type in `cd "<directory>"`, where the <directory> is the folder you would like the project to be, such as "D:/Programming/Software Engineer".   You'll need to do this every time you close the Git Bashs.  <br />
+Type in `cd <directory>`, where the `<directory>` is the folder you would like the project to be, such as "D:/Programming/Software Engineer".   You'll need to do this every time you close the Git Bashs.  <br />
 Type `git clone https://github.com/auchiyam/flag_quest.git` to clone the flag quest repository to that directory.  <br />
 It should make a folder named "flag_quest" with this README.md inside.  <br />
 
 #### 4.  Creating a new branch
 Branch is a different version of code you can use to update.  Creating a new branch for yourself is important, because pushing to master branch directly every time may introduce conflict (such as functions having same name but with different outcome), causing some bugs.  <br />
-To create a new branch, simply type `git checkout -b <branch_name>` where <branch_name> is the branch name you would like to call it.  After the branch has been created, you can switch between branches by using `git checkout <branch_name>`.  <br />
+To create a new branch, simply type `git checkout -b <branch_name>` where `<branch_name>` is the branch name you would like to call it.  After the branch has been created, you can switch between branches by using `git checkout <branch_name>`.  <br />
 
 #### 5.  Uploading changes to a repository
-In the Git Bash command prompt, type `git add <file_name>`, where <file_name> is the file you would like to update.  If you want to add every file you've changed, use `git add .` instead.  <br />
-Type `git commit -m <message>` where <message> is the detail of the change.  <br />
+In the Git Bash command prompt, type `git add <file_name>`, where `<file_name>` is the file you would like to update.  If you want to add every file you've changed, use `git add .` instead.  <br />
+Type `git commit -m <message>` where `<message>` is the detail of the change.  <br />
 If this is the first time pushing the change, type `git remote add origin https://github.com/auchiyam/flag_quest.git` to tell git that's where you want to upload the change to.  <br />
 Finally, type `git push -u origin <branch>` to upload the file.  <br />
 
