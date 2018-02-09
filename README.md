@@ -34,4 +34,5 @@ Keep in mind that you must commit and push every local changes you have before y
 Since master must be the complete version of the program, you'll need to merge the branch you are working with to master in order for your work to be applied.  <br />
 Before merging, make sure the master branch is up to date by typing `git checkout master` then `git pull`.  <br />
 Type `git merge <branch_name>` while in the master branch to merge the branch.  <br />
-Finally, you can delete the branch you've merged by typing `git branch -d <branch_name>`  <br />
+Finally, you can delete the branch you've merged locally by typing `git branch -d <branch_name>`  <br />
+Then, type `git push origin --delete <branch_name>` to delete the branch from the repository.
