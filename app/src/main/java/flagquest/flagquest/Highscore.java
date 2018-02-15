@@ -22,9 +22,9 @@ public class Highscore extends AppCompatActivity {
 
         scoreboard = db.getAllScore(0);
 
-        DisplayScoreBoard();
-
         configureButtons();
+
+        DisplayScoreBoard();
     }
 
     private void configureButtons() {

@@ -82,15 +82,12 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
 
         Cursor d = db.rawQuery("select * from score", null);
         String[] a = d.getColumnNames();
-        for (int u = 0; u < a.length; u++) {
-            System.out.println(a[u]);
-        }
 
         Cursor c = db.rawQuery(String.format("SELECT * FROM %s WHERE %s = ?", table_name, key_difficulty), new String[] {String.valueOf(difficulty)});
 
         if (c.moveToFirst()) {
             do {
-                Score sc = new Score(c.getString(0), c.getInt(1), new Date(c.getString(2)), difficulty);
+                Score sc = new Score(c.getString(2), c.getInt(3), new Date(c.getString(4)), difficulty);
                 s.add(sc);
             } while (c.moveToNext());
         }
