@@ -6,4 +6,103 @@
     android:layout_height="match_parent"
     tools:context="flagquest.flagquest.GameActivity">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="24px"
+        android:layout_marginEnd="24px"
+        android:layout_marginStart="24px"
+        android:layout_marginTop="24px"
+        android:orientation="vertical"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Test Game Page"
+                android:layout_gravity="center_horizontal"
+                android:textSize="60px"
+                android:layout_span="6"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Score"
+                android:layout_gravity="center"
+                android:textSize="30px"
+                android:layout_span="2"/>
+
+            <EditText
+                android:id="@+id/score_test"
+                android:ems="10"
+                android:textSize="30px"
+                android:inputType="number"
+                android:layout_span="4"
+                android:text="" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Name"
+                android:layout_gravity="center"
+                android:textSize="30px"
+                android:layout_span="2"/>
+
+            <EditText
+                android:id="@+id/name_test"
+                android:ems="10"
+                android:textSize="30px"
+                android:inputType="textPersonName"
+                android:layout_span="4"
+                android:text="" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Difficulty"
+                android:layout_gravity="center"
+                android:textSize="30px"
+                android:layout_span="2"/>
+
+            <EditText
+                android:id="@+id/difficulty_test"
+                android:ems="10"
+                android:textSize="30px"
+                android:inputType="textPersonName"
+                android:text=""
+                android:layout_span="4"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_span="6"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit"/>
+
+        </TableRow>
+
+    </TableLayout>
 </android.support.constraint.ConstraintLayout>

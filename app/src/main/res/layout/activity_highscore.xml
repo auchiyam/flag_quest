@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context="flagquest.flagquest.Highscore">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="24px"
+        android:layout_marginEnd="24px"
+        android:layout_marginStart="24px"
+        android:layout_marginTop="24px"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:text="@string/high_score"
+                android:textSize="60px"
+                android:gravity="center_horizontal"
+                android:layout_span="3"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Easy"
+                android:background="#00000000"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/highscore_easy">
+
+            </Button>
+            <Button
+                android:text="Medium"
+                android:background="#00000000"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/highscore_medium">
+
+            </Button>
+            <Button
+                android:text="Hard"
+                android:background="#00000000"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/highscore_hard">
+
+            </Button>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ListView
+                android:id="@+id/scores"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="3" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
 </android.support.constraint.ConstraintLayout>
