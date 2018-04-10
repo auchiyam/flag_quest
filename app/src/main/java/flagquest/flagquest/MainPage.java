@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class MainPage extends AppCompatActivity {
 
     @Override
@@ -32,6 +35,19 @@ public class MainPage extends AppCompatActivity {
                     startActivity(new Intent(MainPage.this, GameActivity.class));
                 }
         });
+
+        GameState.score = 0;
+        GameState.difficulty = 0;
+        GameState.question_num = 0;
+        GameState.random = new Random();
+        GameState.used = new ArrayList<Integer>();
+        GameState.hidden = new boolean[50][30];
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 30; j++) {
+                GameState.hidden[i][j] = false;
+            }
+        }
+
     }
 
     private void configureSetting() {

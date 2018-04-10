@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="flags">
+        <item>@drawable/flag_usa</item>
+    </array>
+
+    <array name="answers">
+        <item>United States of America</item>
+    </array>
+
+</resources>
