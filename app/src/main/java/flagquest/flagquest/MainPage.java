@@ -26,7 +26,8 @@ public class MainPage extends AppCompatActivity {
         configureHighscore();
         configureExit();
     }
-
+	
+	//Main button used to start game
     private void configurePlay() {
         Button play = (Button) findViewById(R.id.play);
         play.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +50,8 @@ public class MainPage extends AppCompatActivity {
         }
 
     }
-
+	
+	//Button used for global system settings
     private void configureSetting() {
         ImageButton setting = (ImageButton) findViewById(R.id.setting);
         setting.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,7 @@ public class MainPage extends AppCompatActivity {
         });
     }
 
+	//Button used to go to highscores
     private void configureHighscore() {
         Button highscore = (Button) findViewById(R.id.highscore);
         highscore.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +73,7 @@ public class MainPage extends AppCompatActivity {
         });
     }
 
+	//Button for exiting out of the game
     private void configureExit() {
         Button exit = (Button) findViewById(R.id.exit);
         exit.setOnClickListener(new View.OnClickListener() {

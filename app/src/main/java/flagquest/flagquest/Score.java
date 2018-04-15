@@ -4,10 +4,11 @@ import android.support.annotation.NonNull;
 
 import java.util.Date;
 
+//Class used to display various info for highscores list
 public class Score implements Comparable<Score> {
-    private String name;
-    private Date date;
-    private int score;
+    private String name; //Name of player
+    private Date date; //Date score achieved
+    private int score; //Score
     private int difficulty; //0 = Easy, 1 = Medium, 2 = Hard
 
     public Score(String n, int s, Date d, int df) {

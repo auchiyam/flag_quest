@@ -43,7 +43,7 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    //CREATE
+    //CREATE new score and add to database
     public void addScore(Score score) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -57,7 +57,7 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    //READ
+    //READ score from database
     public Score getScore(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -75,7 +75,7 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
         return s;
     }
 
-    //Get all scores for that difficulty
+    //Get all scores specified difficulty tier
     public List<Score> getAllScore(int difficulty) {
         List<Score> s = new ArrayList<Score>();
         SQLiteDatabase db = this.getReadableDatabase();
