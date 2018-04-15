@@ -2,11 +2,11 @@
 <resources>
 
     <array name="flags">
-        <item>@drawable/flag_usa</item>
+        <item>@drawable/flag_usa</item><item>@drawable/flag_russia</item>
     </array>
 
     <array name="answers">
-        <item>United States of America</item>
+        <item>United States of America</item><item>Russia</item>
     </array>
 
 </resources>
