@@ -42,6 +42,7 @@ public class GameActivity extends AppCompatActivity {
         start_timer();
     }
 
+    //Depreciated, testing purpose
     private void configureTesting() {
         Button medium = (Button) findViewById(R.id.submit);
         medium.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +116,7 @@ public class GameActivity extends AppCompatActivity {
                 } else {
                     int scr = Integer.parseInt(timer.getText().toString());
 
-                    GameState.score += scr;
+                    GameState.score += scr * (GameState.difficulty + 1);
 
                     is_correct = true;
                 }
@@ -126,8 +127,6 @@ public class GameActivity extends AppCompatActivity {
                 }
             }
         });
-
-        //Draw the flag on the screen
     }
 
     //returns array of 2 strings, the first string being the country name for the flag and second string being the relative path to the flag file for drawing
@@ -177,7 +176,7 @@ public class GameActivity extends AppCompatActivity {
         t.cancel();
         if (GameState.question_num >= total_questions) {
             //temporary, skips result page and records score and returns to the main page
-            Score s = new Score("Zeus", GameState.score, Calendar.getInstance().getTime(), 0);
+            Score s = new Score("Zeus", GameState.score, Calendar.getInstance().getTime(), GameState.difficulty);
 
             db.addScore(s);
 
@@ -206,20 +205,23 @@ public class GameActivity extends AppCompatActivity {
                 break;
         }
 
-        int total = (int)(Math.round(answer.length() * ratio)) + 1;
+        //determine how many letter should be hidden
+        int total = (int)(answer.length() * ratio) + 1;
         int curr = 0;
         int[] used = new int[answer.length()];
 
+        //Initialize used
         for (int i = 0; i < used.length; i++) {
             used[i] = 0;
         }
 
+        int rand;
+        //keep replacing letters with _ <total> times to hide the hint
         for (int i = 0; i < total; i++) {
-            int rand;
 
             do {
                 rand = GameState.random.nextInt(answer.length());
-                //keep getting random flags until either the random number is something not used or the used array is greater than or equal to the amount of total flags available
+                //keep getting random letter until either the random number is something not used
             } while (used[rand] == 1);
 
             hint = hint.substring(0, rand) + "_" + hint.substring(rand+1);
@@ -227,6 +229,7 @@ public class GameActivity extends AppCompatActivity {
             used[i] = 1;
         }
 
+        //Add space between every letter to make the underscore easier to count
         hint = pad(hint);
 
         return hint;

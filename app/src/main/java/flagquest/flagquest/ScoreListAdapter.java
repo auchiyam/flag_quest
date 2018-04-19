@@ -46,8 +46,6 @@ public class ScoreListAdapter extends BaseAdapter {
         TextView name = (TextView)vi.findViewById(R.id.highscore_name);
         TextView difficulty = (TextView)vi.findViewById(R.id.highscore_difficulty);
 
-        System.out.println(data.get(0).getScore());
-
         score.setText(String.valueOf(data.get(i).getScore()));
         date.setText(data.get(i).getDate().toString());
         name.setText(data.get(i).getName());
