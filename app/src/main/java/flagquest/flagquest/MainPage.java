@@ -83,4 +83,11 @@ public class MainPage extends AppCompatActivity {
             }
         });
     }
+
+
+    //When back is pressed in the main page, it exists the game
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }
