@@ -1,12 +1,12 @@
 package flagquest.flagquest;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Highscore extends AppCompatActivity {
@@ -21,6 +21,9 @@ public class Highscore extends AppCompatActivity {
         db = new ScoreDBHandler(Highscore.this);
 
         scoreboard = db.getAllScore(0);
+
+        Collections.sort(scoreboard);
+        Collections.reverse(scoreboard);
 
         configureButtons();
 
@@ -39,6 +42,8 @@ public class Highscore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 scoreboard = db.getAllScore(0);
+                Collections.sort(scoreboard);
+                Collections.reverse(scoreboard);
                 DisplayScoreBoard();
             }
         });
@@ -50,6 +55,8 @@ public class Highscore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 scoreboard = db.getAllScore(1);
+                Collections.sort(scoreboard);
+                Collections.reverse(scoreboard);
                 DisplayScoreBoard();
             }
         });
@@ -61,6 +68,8 @@ public class Highscore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 scoreboard = db.getAllScore(2);
+                Collections.sort(scoreboard);
+                Collections.reverse(scoreboard);
                 DisplayScoreBoard();
             }
         });

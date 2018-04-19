@@ -9,6 +9,7 @@ import android.widget.Button;
 //Activity to set the difficulty
 public class DifficultyActivity extends AppCompatActivity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_difficulty);
