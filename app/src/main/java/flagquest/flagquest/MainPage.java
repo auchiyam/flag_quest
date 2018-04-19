@@ -33,7 +33,7 @@ public class MainPage extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(MainPage.this, GameActivity.class));
+                    startActivity(new Intent(MainPage.this, DifficultyActivity.class));
                 }
         });
 

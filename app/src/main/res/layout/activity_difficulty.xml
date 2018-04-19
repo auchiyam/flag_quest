@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="24px"
+        android:layout_marginEnd="24px"
+        android:layout_marginStart="24px"
+        android:layout_marginTop="24px"
+        android:orientation="vertical"
+        android:stretchColumns="*"
+        android:gravity="center"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:text="Choose the difficulty"
+                android:layout_gravity="center_horizontal"
+                android:textSize="60px"
+                android:layout_span="3"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/difficulty_easy"
+                android:text="Easy"
+                android:textSize="40px" />
+
+            <Button
+                android:id="@+id/difficulty_medium"
+                android:text="Medium"
+                android:textSize="40px" />
+
+            <Button
+                android:id="@+id/difficulty_hard"
+                android:text="Hard"
+                android:textSize="40px" />
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
