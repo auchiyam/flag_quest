@@ -3,10 +3,12 @@
 
     <array name="flags">
         <item>@drawable/flag_usa</item>
+        <item>@drawable/flag_japan</item>
     </array>
 
     <array name="answers">
         <item>United States of America</item>
+        <item>Japan</item>
     </array>
 
 </resources>

@@ -287,4 +287,10 @@ public class GameActivity extends AppCompatActivity {
         }
         return newText;
     }
+
+    //Disallow the back button press during the game
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }
