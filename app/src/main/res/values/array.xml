@@ -5,6 +5,8 @@
         <item>@drawable/flag_usa</item>
         <item>@drawable/flag_russia</item>
         <item>@drawable/flag_japan</item>
+        <item>@drawable/flag_bangladesh</item>
+        
     </array>
 
     <array name="answers">
