@@ -5,12 +5,18 @@
         <item>@drawable/flag_usa</item>
         <item>@drawable/flag_russia</item>
         <item>@drawable/flag_japan</item>
+        <item>@drawable/flag_bangladesh</item>
+        <item>@drawable/flag_brazil</item>
+        
     </array>
 
     <array name="answers">
         <item>United States of America</item>
         <item>Russia</item>
         <item>Japan</item>
+        <item>Bangladesh</item>
+        <item>Brazil</item>
+        
     </array>
 
 </resources>
