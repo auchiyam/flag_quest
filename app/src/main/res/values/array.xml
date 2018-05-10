@@ -7,6 +7,15 @@
         <item>@drawable/flag_japan</item>
         <item>@drawable/flag_bangladesh</item>
         <item>@drawable/flag_brazil</item>
+        <item>@drawable/Flag_of_Uruguay</item>
+        <item>@drawable/Flag_of_Uzbekistan</item>
+        <item>@drawable/Flag_of_Vanuatu</item>
+        <item>@drawable/Flag_of_Venezuela</item>
+        <item>@drawable/Flag_of_Vietnam</item>
+        <item>@drawable/Flag_of_Yemen</item>
+        <item>@drawable/Flag_of_Yugoslavia</item>
+        <item>@drawable/Flag_of_Zambia</item>
+        <item>@drawable/Flag_of_Zimbabwe</item>
         
     </array>
 
@@ -16,6 +25,15 @@
         <item>Japan</item>
         <item>Bangladesh</item>
         <item>Brazil</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Yugoslavia</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
         
     </array>
 
