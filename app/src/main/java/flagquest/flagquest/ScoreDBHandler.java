@@ -25,6 +25,8 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
 
     public ScoreDBHandler(Context context) { super(context, NAME, null, VERSION); }
 
+    public ScoreDBHandler() {super(null, NAME, null, VERSION); }
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String initialize_table = ""
@@ -57,31 +59,12 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    //READ score from database
-    public Score getScore(int id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor c = db.query(table_name, new String[] { key_id, key_name, key_score, key_date, key_difficulty}, key_id + "=?", new String[] {String.valueOf(id)}, null, null, null, null);
-
-        Score s;
-        if (c != null) {
-            c.moveToFirst();
-            s = new Score(c.getString(0), c.getInt(1), new Date(c.getString(2)), c.getInt(3));
-        }
-        else {
-            throw new IndexOutOfBoundsException();
-        }
-
-        return s;
-    }
-
     //Get all scores specified difficulty tier
     public List<Score> getAllScore(int difficulty) {
         List<Score> s = new ArrayList<Score>();
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor d = db.rawQuery("select * from score", null);
-        String[] a = d.getColumnNames();
 
         Cursor c = db.rawQuery(String.format("SELECT * FROM %s WHERE %s = ?", table_name, key_difficulty), new String[] {String.valueOf(difficulty)});
 
@@ -100,7 +83,7 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
         Cursor c = db.rawQuery("" +
                         "SELECT " + key_name + ", " + key_score + ", " + key_date + " " +
                         "FROM " + table_name + ", (SELECT Max(" + key_score + ") as hs FROM " + table_name + ") as Highscore " +
-                        "WHERE Highscore.hs = " + table_name + "." + key_score + " AND " + table_name + "." + key_score + " = " + difficulty
+                        "WHERE Highscore.hs = " + table_name + "." + key_score + " AND " + table_name + "." + key_difficulty + " = " + difficulty
                         , null);
 
         Score s = null;
@@ -113,5 +96,11 @@ public class ScoreDBHandler extends SQLiteOpenHelper {
         }
 
         return s;
+    }
+
+    public void clear() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + table_name);
+        onCreate(sqLiteDatabase);
     }
 }
