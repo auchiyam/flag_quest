@@ -7,21 +7,21 @@
         <item>@drawable/flag_japan</item>
         <item>@drawable/flag_bangladesh</item>
         <item>@drawable/flag_brazil</item>
-        <item>@drawable/Flag_of_Uruguay</item>
-        <item>@drawable/Flag_of_Uzbekistan</item>
-        <item>@drawable/Flag_of_Vanuatu</item>
-        <item>@drawable/Flag_of_Venezuela</item>
-        <item>@drawable/Flag_of_Vietnam</item>
-        <item>@drawable/Flag_of_Yemen</item>
-        <item>@drawable/Flag_of_Yugoslavia</item>
-        <item>@drawable/Flag_of_Zambia</item>
-        <item>@drawable/Flag_of_Zimbabwe</item>
-        <item>@drawable/Flag_of_Afghanistan</item>
-        <item>@drawable/Flag_of_Albania</item>
-        <item>@drawable/Flag_of_Algeria</item>
-        <item>@drawable/Flag_of_Andorra</item>
-        <item>@drawable/Flag_of_Angola</item>
-        <item>@drawable/Flag_of_Armenia</item>
+        <item>@drawable/flag_of_uruguay</item>
+        <item>@drawable/flag_of_uzbekistan</item>
+        <item>@drawable/flag_of_vanuatu</item>
+        <item>@drawable/flag_of_venezuela</item>
+        <item>@drawable/flag_of_vietnam</item>
+        <item>@drawable/flag_of_yemen</item>
+        <item>@drawable/flag_of_yugoslavia</item>
+        <item>@drawable/flag_of_zambia</item>
+        <item>@drawable/flag_of_zimbabwe</item>
+        <item>@drawable/flag_of_afghanistan</item>
+        <item>@drawable/flag_of_alabania</item>
+        <item>@drawable/flag_of_algeria</item>
+        <item>@drawable/flag_of_andorra</item>
+        <item>@drawable/flag_of_angola</item>
+        <item>@drawable/flag_of_armenia</item>
         
     </array>
 
